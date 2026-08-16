@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>GSCSuite — Bulk Search Console &amp; Bing toolkit that tells you what's real</title>
+<meta name="description" content="Bulk URL inspection, IndexNow submission, and Search Console reporting — built on real Google &amp; Bing APIs, with every automated feature clearly flagged." />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="canonical" href="https://gscsuite.online/" />
+<link rel="stylesheet" href="/assets/site.css" />
+<meta property="og:title" content="GSCSuite — the honest Search Console toolkit" />
+<meta property="og:description" content="Bulk inspection, IndexNow, and reporting on real APIs — with unofficial automation clearly labeled, not hidden." />
+<meta property="og:type" content="website" />
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap">
+    <a href="/" class="logo"><span class="bracket">&gt;</span>gscsuite<span class="bracket">_</span></a>
+    <div class="nav-links">
+      <a href="/#features">Features</a>
+      <a href="/pricing.html">Pricing</a>
+      <a href="/blog/">Blog</a>
+      <a href="/#faq">FAQ</a>
+    </div>
+    <a href="/pricing.html" class="nav-cta">Get GSCSuite</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">// Chrome extension for Search Console + Bing</span>
+      <h1>Know exactly<br>what's <em>real.</em></h1>
+      <p class="lead">Bulk URL inspection, instant IndexNow submission, and full Search Console reporting — built on documented Google and Bing APIs. And where a feature isn't backed by an official API, we say so, in the product, before you rely on it.</p>
+      <div class="hero-ctas">
+        <a href="/pricing.html" class="btn btn-primary">Add to Chrome — it's free</a>
+        <a href="#trust" class="btn btn-ghost">See what's official →</a>
+      </div>
+      <p class="hero-note">No credit card for the free tier. 5-device license from $29/yr.</p>
+    </div>
+    <div class="readout">
+      <div class="readout-head"><span class="dot"></span> live_status.log</div>
+      <div class="readout-body">
+        <div class="readout-row ok"><span class="tag">searchAnalytics.query</span><span class="status">OFFICIAL API</span><span class="ms">210ms</span></div>
+        <div class="readout-row ok"><span class="tag">urlInspection.index.inspect</span><span class="status">OFFICIAL API</span><span class="ms">340ms</span></div>
+        <div class="readout-row ok"><span class="tag">IndexNow · api.indexnow.org</span><span class="status">OFFICIAL PROTOCOL</span><span class="ms">118ms</span></div>
+        <div class="readout-row warn"><span class="tag">Request Indexing (Google)</span><span class="status">UNOFFICIAL · UI AUTOMATION</span><span class="ms">—</span></div>
+        <div class="readout-row warn"><span class="tag">Remove / block URL (Google)</span><span class="status">UNOFFICIAL · UI AUTOMATION</span><span class="ms">—</span></div>
+        <div class="readout-row ok"><span class="tag">sitemaps.submit</span><span class="status">OFFICIAL API</span><span class="ms">96ms</span></div>
+      </div>
+      <div class="readout-cursor">gscsuite@toolkit ~ %</div>
+    </div>
+  </div>
+</header>
+
+<section class="thesis">
+  <div class="wrap">
+    <blockquote>
+      "Most bulk-SEO extensions won't tell you which buttons call a real Google API
+      and which ones are just... clicking around your Search Console tab for you.
+      We built the one that draws the line out loud."
+      <cite>— why GSCSuite exists</cite>
+    </blockquote>
+  </div>
+</section>
+
+<section id="trust">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">// The trust split</span>
+      <h2>Every feature, labeled honestly.</h2>
+      <p>Google's Indexing API is officially restricted to <code>JobPosting</code> and <code>BroadcastEvent</code> content — not ordinary pages. There's no public API for GSC's Removals tool at all. Tools that offer "bulk Google indexing" and "bulk removal" for any URL are automating the web UI, whether they tell you or not. We tell you.</p>
+    </div>
+    <div class="trust-grid">
+      <div class="trust-col official">
+        <h3>✓ Backed by a real API</h3>
+        <p class="sub">Documented, sanctioned, rate-limited by Google/Bing themselves — not us.</p>
+        <div class="trust-item"><span class="mark">01</span><div><div class="name">Bulk URL Inspection</div><div class="desc">Real index status, coverage, canonical &amp; mobile usability via Google's URL Inspection API.</div></div></div>
+        <div class="trust-item"><span class="mark">02</span><div><div class="name">Search Analytics dashboard &amp; export</div><div class="desc">Clicks, impressions, CTR, position — queried directly, exported as CSV.</div></div></div>
+        <div class="trust-item"><span class="mark">03</span><div><div class="name">Sitemap management</div><div class="desc">List, submit, and re-ping sitemaps through the official endpoint.</div></div></div>
+        <div class="trust-item"><span class="mark">04</span><div><div class="name">Bulk instant indexing — Bing, Yandex, Naver</div><div class="desc">Via IndexNow, the open protocol these engines officially consume.</div></div></div>
+      </div>
+      <div class="trust-col unofficial">
+        <h3>⚠ Unofficial automation</h3>
+        <p class="sub">Drives the real Search Console UI in your own logged-in tab. Useful — but not guaranteed, and it's the first thing that breaks when Google redesigns a page.</p>
+        <div class="trust-item"><span class="mark">01</span><div><div class="name">Bulk "Request Indexing" (Google)</div><div class="desc">No public API exists for this on ordinary pages — only JobPosting/BroadcastEvent content qualifies.</div></div></div>
+        <div class="trust-item"><span class="mark">02</span><div><div class="name">Bulk Removal / Block URL (Google)</div><div class="desc">GSC's Removals tool has no public API. This automates the button, conservatively paced.</div></div></div>
+        <div class="trust-item"><span class="mark">03</span><div><div class="name">No CAPTCHA bypass, ever</div><div class="desc">If Google's UI presents a challenge, the run stops and tells you — we don't try to push through it.</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="features">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">// How it works</span>
+      <h2>From URL list to result, in one tab.</h2>
+    </div>
+    <div class="steps">
+      <div class="step"><h4>Connect</h4><p>Sign in with Google, select a verified property. Read-only until you run something.</p></div>
+      <div class="step"><h4>Paste URLs</h4><p>One per line — inspect, submit to IndexNow, or run indexing/removal in bulk.</p></div>
+      <div class="step"><h4>Watch it run</h4><p>A live log shows each URL's result as it completes, official calls and automated ones labeled separately.</p></div>
+      <div class="step"><h4>Export &amp; report</h4><p>Pull the full picture into a CSV, or compare two date ranges in the dashboard.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="pricing-teaser">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">// Pricing</span>
+      <h2>Start free. Upgrade when it's paying for itself.</h2>
+    </div>
+    <div class="pricing-grid">
+      <div class="price-card">
+        <h3>Free</h3>
+        <div class="price-amount">$0</div>
+        <p class="desc">Single-URL inspection &amp; read-only dashboard.</p>
+        <ul class="price-list">
+          <li>Search Console dashboard</li>
+          <li>Single URL inspection</li>
+          <li>1 device</li>
+        </ul>
+        <a href="/pricing.html" class="btn btn-ghost">Add to Chrome</a>
+      </div>
+      <div class="price-card featured">
+        <h3>Yearly</h3>
+        <div class="price-amount">$29<span>/yr</span></div>
+        <p class="desc">Everything, on up to 5 devices.</p>
+        <ul class="price-list">
+          <li>Bulk inspection, export &amp; IndexNow</li>
+          <li>Unofficial Google automation, opt-in</li>
+          <li>5 devices</li>
+        </ul>
+        <a href="/pricing.html" class="btn btn-primary">Get yearly</a>
+      </div>
+      <div class="price-card">
+        <h3>Lifetime</h3>
+        <div class="price-amount">$59</div>
+        <p class="desc">Pay once, own it. Same limits as yearly.</p>
+        <ul class="price-list">
+          <li>All features, forever</li>
+          <li>Free updates</li>
+          <li>5 devices</li>
+        </ul>
+        <a href="/pricing.html" class="btn btn-ghost">Get lifetime</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">// FAQ</span>
+      <h2>Before you ask support.</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-q"><span>Is bulk Google indexing actually guaranteed to work?</span><span class="plus">+</span></div>
+        <div class="faq-a"><div class="faq-a-inner">No — and we'd rather say that here than have you find out from a support ticket. It automates the real Search Console UI in your logged-in tab, which Google can change at any time. We monitor for breakage and ship fixes fast, but we don't control Google's side.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span>Will this get my Google account flagged?</span><span class="plus">+</span></div>
+        <div class="faq-a"><div class="faq-a-inner">The automated features carry real risk of Google flagging automated-looking activity — we pace actions conservatively by default and stop immediately on any CAPTCHA rather than trying to bypass it, but we can't eliminate the risk entirely. The API-backed features (inspection, reporting, IndexNow) carry none of this risk.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span>Why isn't Google bulk-indexing an official feature anywhere?</span><span class="plus">+</span></div>
+        <div class="faq-a"><div class="faq-a-inner">Google's Indexing API is restricted to JobPosting and BroadcastEvent content by design — it was never meant for general pages. Any tool claiming otherwise is either misusing that API or automating the UI like we are, openly.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span>What happens on a device limit?</span><span class="plus">+</span></div>
+        <div class="faq-a"><div class="faq-a-inner">Paid plans include 5 seats. Need more for a larger team? Get in touch — team pricing is on the way.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span>Refunds?</span><span class="plus">+</span></div>
+        <div class="faq-a"><div class="faq-a-inner">Full refund within 14 days if it's not working for you — just email support.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="wrap">
+    <h2>Stop guessing which button is real.</h2>
+    <p>Free to install. Upgrade only once bulk tools are actually saving you time.</p>
+    <div class="hero-ctas"><a href="/pricing.html" class="btn btn-primary">Add to Chrome — it's free</a></div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="logo"><span class="bracket">&gt;</span>gscsuite<span class="bracket">_</span></div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h5>Product</h5>
+          <a href="/#features">Features</a>
+          <a href="/pricing.html">Pricing</a>
+          <a href="/#faq">FAQ</a>
+        </div>
+        <div class="footer-col">
+          <h5>Resources</h5>
+          <a href="/blog/">Blog</a>
+          <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+        </div>
+        <div class="footer-col">
+          <h5>Legal</h5>
+          <a href="/privacy.html">Privacy</a>
+          <a href="/terms.html">Terms</a>
+        </div>
+      </div>
+    </div>
+    <div class="divider"></div>
+    <div class="footer-bottom" style="margin-top:24px;">
+      <span>© 2026 GSCSuite. Not affiliated with Google or Microsoft.</span>
+      <span>hello@gscsuite.online</span>
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/site.js"></script>
+</body>
+</html>

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://gscsuite.online/sitemap.xml

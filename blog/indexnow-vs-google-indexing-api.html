@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>IndexNow vs. the Google Indexing API — GSCSuite</title>
+<meta name="description" content="They get confused constantly, but IndexNow and Google's Indexing API are unrelated mechanisms with different supported search engines and different rules." />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="canonical" href="https://gscsuite.online/blog/indexnow-vs-google-indexing-api.html" />
+<link rel="stylesheet" href="/assets/site.css" />
+</head>
+<body>
+<nav class="nav">
+  <div class="wrap">
+    <a href="/" class="logo"><span class="bracket">&gt;</span>gscsuite<span class="bracket">_</span></a>
+    <div class="nav-links"><a href="/#features">Features</a><a href="/pricing.html">Pricing</a><a href="/blog/">Blog</a><a href="/#faq">FAQ</a></div>
+    <a href="/pricing.html" class="nav-cta">Get GSCSuite</a>
+  </div>
+</nav>
+
+<article class="article">
+  <span class="eyebrow">// indexnow</span>
+  <h1>IndexNow vs. the Google Indexing API: not the same thing</h1>
+  <div class="meta">Aug 12, 2026 · 4 min read</div>
+
+  <p>These two get lumped together constantly because they both promise "instant indexing." They don't share an endpoint, a protocol, or a set of supported search engines, and mixing them up is the single most common source of confusion in bulk-indexing marketing copy.</p>
+
+  <h2>IndexNow, in short</h2>
+  <p>IndexNow is an open protocol — not a Google product. You generate a key, host it as a plain-text file at your domain root, then POST a batch of URLs to <code>api.indexnow.org</code>. Whoever consumes that feed gets notified a URL changed. It's officially supported by Bing, Yandex, Naver, and Seznam.cz. It accepts up to 10,000 URLs per request, with no special approval process.</p>
+
+  <h2>The Google Indexing API, in short</h2>
+  <p>A completely separate Google-only API, restricted to <code>JobPosting</code> and <code>BroadcastEvent</code> content, capped at 200 requests/day by default, requiring its own OAuth setup. Google does not participate in IndexNow.</p>
+
+  <table>
+    <thead><tr><th></th><th>IndexNow</th><th>Google Indexing API</th></tr></thead>
+    <tbody>
+      <tr><td>Search engines</td><td>Bing, Yandex, Naver, Seznam</td><td>Google only</td></tr>
+      <tr><td>Content restriction</td><td>None</td><td>JobPosting / BroadcastEvent only</td></tr>
+      <tr><td>Approval needed</td><td>No — just host a key file</td><td>Yes, for elevated quota</td></tr>
+      <tr><td>Default daily limit</td><td>10,000 URLs/request, no stated daily cap</td><td>200 requests/day</td></tr>
+    </tbody>
+  </table>
+
+  <h2>What this means practically</h2>
+  <p>If you want fast, sanctioned bulk indexing signals and you're not exclusively worried about Google, IndexNow does exactly what it says on the tin — submit and move on. If you specifically need Google to notice a page faster and it isn't a job posting or livestream, there's no equivalent official mechanism. Anything claiming otherwise for Google specifically is automating the UI or misusing the restricted API — see <a href="/blog/google-indexing-api-explained.html">our breakdown of that restriction</a> for the receipts.</p>
+</article>
+
+<footer><div class="wrap"><div class="footer-bottom"><span>© 2026 GSCSuite. Not affiliated with Google or Microsoft.</span><span>hello@gscsuite.online</span></div></div></footer>
+</body>
+</html>

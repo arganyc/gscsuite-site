@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>The Google Indexing API only works for two content types — GSCSuite</title>
+<meta name="description" content="Google's Indexing API is officially restricted to JobPosting and BroadcastEvent content. Here's what that means for 'bulk indexing' tools." />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="canonical" href="https://gscsuite.online/blog/google-indexing-api-explained.html" />
+<link rel="stylesheet" href="/assets/site.css" />
+</head>
+<body>
+<nav class="nav">
+  <div class="wrap">
+    <a href="/" class="logo"><span class="bracket">&gt;</span>gscsuite<span class="bracket">_</span></a>
+    <div class="nav-links"><a href="/#features">Features</a><a href="/pricing.html">Pricing</a><a href="/blog/">Blog</a><a href="/#faq">FAQ</a></div>
+    <a href="/pricing.html" class="nav-cta">Get GSCSuite</a>
+  </div>
+</nav>
+
+<article class="article">
+  <span class="eyebrow">// indexing-api</span>
+  <h1>The Google Indexing API only works for two content types</h1>
+  <div class="meta">Aug 10, 2026 · 5 min read</div>
+
+  <p>Search "bulk Google indexing tool" and you'll find dozens of extensions and SaaS products promising to get your pages indexed instantly, at scale. Almost none of them mention that Google's actual Indexing API isn't built for this. It's worth reading the restriction in Google's own words, because it changes what you should expect from any tool — including this one.</p>
+
+  <h2>What the Indexing API is actually for</h2>
+  <p>Google's documentation states it plainly: the Indexing API "can only be used to crawl pages with either <code>JobPosting</code> or <code>BroadcastEvent</code> embedded in a <code>VideoObject</code>." That's it. Two content types. It was built so job boards and livestream platforms — where a page's relevance is often measured in hours, not weeks — could signal Google the moment a posting goes up or comes down.</p>
+  <p>It is not a general-purpose "please index my blog post" endpoint, no matter how many tools present it that way.</p>
+
+  <h2>The quota gives it away</h2>
+  <p>Even within its intended use, the API is capped at 200 publish requests per day per project by default. For comparison, a site publishing a few dozen ordinary pages a day would blow through that in hours if it were somehow eligible — which underlines that this was never meant to carry general indexing traffic.</p>
+
+  <table>
+    <thead><tr><th>Limit</th><th>Value</th></tr></thead>
+    <tbody>
+      <tr><td>Publish requests (URL_UPDATED / URL_DELETED)</td><td>200/day/project</td></tr>
+      <tr><td>Metadata requests</td><td>180/minute/project</td></tr>
+      <tr><td>All endpoints combined</td><td>380/minute/project</td></tr>
+    </tbody>
+  </table>
+
+  <h2>So what are "bulk Google indexing" tools actually doing?</h2>
+  <p>Generally one of two things. Some call the Indexing API against ordinary pages anyway — outside its documented scope — which works until Google's enforcement catches up with the project, at which point the whole thing stops working with no warning. Others automate the Search Console web UI directly: opening the URL Inspection tool, typing in a URL, and clicking "Request Indexing" the way a person would, just faster and in a loop.</p>
+  <p>The second approach is what GSCSuite's unofficial Google-side features do — and we label them as unofficial in the product, because there's no version of this that's backed by a real API contract. If a competitor's pricing page doesn't mention this distinction anywhere, that's worth asking them about directly.</p>
+
+  <h2>What actually is safe to build on</h2>
+  <p>The URL Inspection API (read-only index status, coverage, canonical, mobile usability) is real and documented. Search Analytics queries are real. Sitemap submission is real. And for instant indexing that's genuinely sanctioned by the receiving search engine, IndexNow — covered in <a href="/blog/indexnow-vs-google-indexing-api.html">the next post</a> — is the one mechanism built for exactly this purpose, just not for Google.</p>
+
+  <blockquote>Requesting Approval and Quota — Indexing API Documentation, Google Search Central.</blockquote>
+</article>
+
+<footer><div class="wrap"><div class="footer-bottom"><span>© 2026 GSCSuite. Not affiliated with Google or Microsoft.</span><span>hello@gscsuite.online</span></div></div></footer>
+</body>
+</html>
